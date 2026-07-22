@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>JAPAN BATHING JOURNAL — Sauna, Onsen &amp; Sento for the Western Traveler</title>
+<meta name="description" content="JAPAN BATHING JOURNAL — an English-language guide to Japanese bathing culture: sauna, onsen and sento, reported in Japan by a sauna producer who designs private bathing itineraries for European travellers." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,400..600&family=Inter:wght@300;400;500;600&family=Noto+Serif+JP:wght@300;500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --paper:#F4EEE5;        /* warm bathhouse paper   */
+    --paper-2:#EDE4D7;      /* slightly deeper panel  */
+    --ink:#20180F;          /* near-black cedar ink   */
+    --ink-soft:#5A4E40;     /* muted body ink         */
+    --line:#D6C9B6;         /* hairline               */
+    --hinoki:#9C5E33;       /* cypress / terracotta   */
+    --hinoki-deep:#7A431F;
+    --steam:#8FA0A0;        /* cool steam grey-green  */
+    --gold:#B98A3E;
+    --shadow:0 30px 60px -30px rgba(32,24,15,.45);
+    --maxw:1240px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',system-ui,sans-serif;
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:400;line-height:1.05;letter-spacing:-.01em}
+  .jp{font-family:'Noto Serif JP',serif;font-weight:300}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+
+  /* Editorial photo treatment — swap the --img url() for your own shoot library.
+     A warm overlay + subtle grade unifies any photo into the house style. */
+  .ph{position:relative;overflow:hidden;background:#cdbfa9}
+  .ph::before{content:"";position:absolute;inset:0;background-size:cover;background-position:center;
+    background-image:var(--img);filter:saturate(.86) contrast(1.02);transform:scale(1.01);transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}
+  .ph::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(32,24,15,.06),rgba(32,24,15,.30));mix-blend-mode:multiply}
+  a:hover>.ph::before,.hovimg:hover .ph::before{transform:scale(1.06)}
+
+  .eyebrow{font-family:'Inter';font-size:11.5px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--hinoki)}
+  .rule{height:1px;background:var(--line);border:0}
+
+  /* ---------- TOP BAR ---------- */
+  header.top{position:sticky;top:0;z-index:60;background:rgba(244,238,229,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .topgrid{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .mast{font-family:'Fraunces';font-weight:600;font-size:16.5px;letter-spacing:.12em;text-transform:uppercase;line-height:1.2}
+  .mast .amp{color:var(--hinoki);font-style:italic;font-weight:400}
+  .mast small{display:block;font-family:'Inter';font-weight:600;font-size:9px;letter-spacing:.34em;color:var(--hinoki);margin-top:2px;text-transform:uppercase}
+  nav.main{display:flex;gap:26px;align-items:center}
+  nav.main a{font-size:13px;font-weight:500;letter-spacing:.02em;color:var(--ink-soft);transition:color .2s}
+  nav.main a:hover{color:var(--hinoki)}
+  .lang{font-size:11px;font-weight:600;letter-spacing:.12em;border:1px solid var(--line);border-radius:20px;padding:5px 11px;color:var(--ink-soft)}
+  .note-cta{background:var(--hinoki);border-color:var(--hinoki);color:#fff;letter-spacing:.06em;transition:background .2s,transform .2s}
+  .note-cta:hover{background:var(--hinoki-deep);transform:translateY(-1px)}
+  .burger{display:none;flex-direction:column;gap:4px;cursor:pointer}
+  .burger span{width:22px;height:2px;background:var(--ink)}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;color:#fff}
+  .hero .ph{position:absolute;inset:0}
+  .hero-slides .slide{position:absolute;inset:0;background-size:cover;background-position:center;
+    opacity:0;transition:opacity 1.2s ease;filter:saturate(.86) contrast(1.02)}
+  .hero-slides .slide.on{opacity:1}
+  .slide-tag{position:absolute;left:clamp(20px,4vw,48px);bottom:36px;z-index:3;
+    font-size:12px;letter-spacing:.05em;color:rgba(255,255,255,.85);
+    border:1px solid rgba(255,255,255,.35);border-radius:20px;padding:7px 14px;
+    backdrop-filter:blur(6px);background:rgba(32,24,15,.25);transition:background .2s}
+  .slide-tag:hover{background:rgba(32,24,15,.5)}
+  .slide-tag .st-label{font-weight:600;letter-spacing:.18em;text-transform:uppercase;font-size:9.5px;color:#E8C98E;margin-right:8px}
+  @media (prefers-reduced-motion: reduce){.hero-slides .slide{transition:none}}
+  @media (max-width:720px){.slide-tag{display:none}}
+  .hero .ph::before{background-image:none}
+  .hero .ph::after{z-index:2;background:
+    linear-gradient(100deg,rgba(32,24,15,.52) 0%,rgba(32,24,15,.28) 52%,rgba(32,24,15,.10) 100%),
+    linear-gradient(180deg,rgba(32,24,15,.12) 0%,rgba(32,24,15,.12) 45%,rgba(32,24,15,.72) 100%)}
+  .hero-inner{position:relative;z-index:2;padding-bottom:clamp(40px,7vw,90px);max-width:920px}
+  .hero .eyebrow{color:#E8C98E}
+  .hero h1{font-size:clamp(42px,7vw,88px);margin:18px 0 22px;font-weight:400}
+  .hero h1 em{font-style:italic;color:#F0D8AC}
+  .hero p.lede{font-size:clamp(16px,1.5vw,20px);max-width:600px;color:rgba(255,255,255,.9);font-weight:300}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-size:13.5px;font-weight:600;letter-spacing:.03em;
+    padding:14px 24px;border-radius:40px;transition:transform .2s,background .2s,color .2s}
+  .btn-solid{background:#fff;color:var(--ink)}
+  .btn-solid:hover{transform:translateY(-2px);background:#F0D8AC}
+  .btn-ghost{border:1px solid rgba(255,255,255,.5);color:#fff}
+  .btn-ghost:hover{background:rgba(255,255,255,.12)}
+  .scrollhint{position:absolute;right:clamp(20px,4vw,48px);bottom:36px;z-index:2;writing-mode:vertical-rl;
+    font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+
+  /* ---------- SECTION SHELL ---------- */
+  section{padding:clamp(56px,7vw,104px) 0}
+  .sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:44px;flex-wrap:wrap}
+  .sec-head h2{font-size:clamp(28px,3.4vw,44px)}
+  .sec-head p{max-width:420px;color:var(--ink-soft);font-size:15px}
+  .seclink{font-size:12.5px;font-weight:600;letter-spacing:.06em;color:var(--hinoki);white-space:nowrap}
+  .seclink::after{content:" →"}
+
+  /* ---------- LEAD FEATURE ---------- */
+  .lead{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(28px,4vw,56px);align-items:center}
+  .lead .ph{aspect-ratio:4/3;border-radius:4px;--img:url('https://images.unsplash.com/photo-1743286159555-ea765c1bc5e6?q=80&w=1200&auto=format&fit=crop')}
+  .lead h3{font-size:clamp(28px,3.6vw,46px);margin:16px 0 20px}
+  .lead h3 em{font-style:italic}
+  .lead p{color:var(--ink-soft);font-size:16px;margin-bottom:18px}
+  .byline{font-size:12.5px;color:var(--ink-soft);letter-spacing:.02em}
+  .byline b{color:var(--ink);font-weight:600}
+
+  /* ---------- COLLECTIONS GRID ---------- */
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.2vw,30px)}
+  .card{display:block}
+  .card .ph{aspect-ratio:3/4;border-radius:4px;margin-bottom:16px}
+  .card .kicker{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--hinoki)}
+  .card h4{font-size:22px;margin:9px 0 8px;line-height:1.12}
+  .card p{font-size:14px;color:var(--ink-soft)}
+  .card:nth-child(1) .ph{--img:url('articles/img/koganeyu-shinjuku-2-mural-bath.jpg')}
+  .card:nth-child(2) .ph{--img:url('articles/img/tattoo-friendly/daikokuyu-entrance.jpg')}
+  .card:nth-child(3) .ph{--img:url('articles/img/shumeikan/shumeikan-exterior.jpg')}
+  .card:nth-child(4) .ph{--img:url('articles/img/nuka-to-yuge/nuka-bran-mound-official.jpg')}
+  .card:nth-child(5) .ph{--img:url('https://upload.wikimedia.org/wikipedia/commons/e/ec/Japanese_communal_bathhouse_SENTO_Sent%C5%8D_%E9%8A%AD%E6%B9%AF%E3%81%AE%E6%B5%B4%E5%AE%A4.jpg')}
+  .card:nth-child(6) .ph{--img:url('articles/img/taiyo-tsubomi/taiyo-tsubomi-exterior-petals-sky.jpg')}
+
+  /* ---------- ETIQUETTE (dark) ---------- */
+  .dark{background:var(--ink);color:var(--paper)}
+  .dark .eyebrow{color:var(--gold)}
+  .dark .sec-head h2{color:#fff}
+  .dark .sec-head p{color:rgba(244,238,229,.65)}
+  .etq{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,26px);margin-top:8px}
+  .etq .item{border-top:1px solid rgba(244,238,229,.18);padding-top:20px}
+  .etq .n{font-family:'Fraunces';font-size:15px;color:var(--gold);letter-spacing:.1em}
+  .etq h4{font-size:19px;color:#fff;margin:14px 0 10px;font-weight:400}
+  .etq p{font-size:13.5px;color:rgba(244,238,229,.7);line-height:1.55}
+  .etq .tag{display:inline-block;margin-top:12px;font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--gold);border:1px solid rgba(185,138,62,.4);border-radius:20px;padding:4px 10px}
+
+  /* ---------- REGIONS STRIP ---------- */
+
+  /* ---------- HOST / CONCIERGE ---------- */
+  .host{background:var(--paper-2)}
+  .host-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(28px,4vw,60px);align-items:center}
+  .jmap{position:relative;aspect-ratio:4/5;border-radius:4px;background:var(--paper-2);overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .jmap .jm{width:96%;height:96%;object-fit:contain}
+  .jchip{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:5px;z-index:2}
+  .jchip .c{width:48px;height:48px;border-radius:50%;background-size:cover;background-position:center;border:3px solid #fff;outline:1px solid var(--line)}
+  .jchip .lbl{font-size:10px;font-weight:600;letter-spacing:.06em;background:rgba(244,238,229,.95);border:1px solid var(--line);padding:2px 9px;border-radius:10px;color:var(--ink-soft);white-space:nowrap}
+  .jm-credit{position:absolute;left:12px;bottom:10px;font-size:9.5px;letter-spacing:.03em;color:var(--ink-soft);opacity:.7}
+  @media (max-width:720px){.jchip .c{width:46px;height:46px}.jchip .lbl{font-size:9px}}
+  .host h2{font-size:clamp(28px,3.4vw,44px);margin:16px 0 20px}
+  .host h2 em{font-style:italic}
+  .host p{color:var(--ink-soft);font-size:16px;margin-bottom:16px;max-width:560px}
+  .host .stats{display:flex;gap:38px;margin:26px 0 30px;flex-wrap:wrap}
+  .host .creds{margin:26px 0 30px;display:flex;flex-direction:column;gap:12px}
+  .host .creds .cr{font-size:14px;color:var(--ink-soft);padding-left:18px;position:relative}
+  .host .creds .cr::before{content:"";position:absolute;left:0;top:.52em;width:8px;height:2px;background:var(--hinoki)}
+  .host .stats .s .num{font-family:'Fraunces';font-size:38px;color:var(--hinoki);line-height:1}
+  .host .stats .s .cap{font-size:12px;letter-spacing:.04em;color:var(--ink-soft);margin-top:6px}
+  .btn-hinoki{background:var(--hinoki);color:#fff}
+  .btn-hinoki:hover{background:var(--hinoki-deep);transform:translateY(-2px)}
+
+  /* ---------- PREMIUM REPORTS (NOTE) ---------- */
+  .reports .sec-head p{max-width:480px}
+  .rep-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,3vw,44px)}
+  .rep-feature{background:var(--ink);color:var(--paper);border-radius:6px;overflow:hidden;display:grid;grid-template-rows:auto 1fr}
+  .rep-feature .ph{aspect-ratio:16/8;--img:url('https://picsum.photos/seed/japan-sauna-market-data/1200/600')}
+  .rep-feature .body{padding:clamp(24px,3vw,40px)}
+  .rep-feature .eyebrow{color:var(--gold)}
+  .rep-feature h3{color:#fff;font-size:clamp(24px,2.6vw,34px);margin:14px 0 14px}
+  .rep-feature p{color:rgba(244,238,229,.72);font-size:15px;margin-bottom:22px}
+  .rep-list{display:flex;flex-direction:column;gap:16px}
+  .rep-item{border:1px solid var(--line);border-radius:6px;padding:22px 24px;background:#fff;transition:transform .2s,box-shadow .2s}
+  .rep-item:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+  .rep-item .meta{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--steam)}
+  .rep-item h4{font-size:20px;margin:8px 0 8px}
+  .rep-item p{font-size:13.5px;color:var(--ink-soft);margin-bottom:14px}
+  .price{display:flex;align-items:baseline;gap:10px}
+  .price .amt{font-family:'Fraunces';font-size:22px;color:var(--hinoki)}
+  .price .per{font-size:12px;color:var(--ink-soft)}
+  .note-badge{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;color:var(--ink);
+    background:#41C9B4;border-radius:5px;padding:9px 14px;margin-top:6px}
+
+  /* ---------- NEWSLETTER ---------- */
+  .news{background:var(--hinoki);color:#fff;border-radius:8px;padding:clamp(36px,5vw,64px);text-align:center;margin:0 auto}
+  .news .eyebrow{color:#F0D8AC}
+  .news h2{font-size:clamp(28px,3.6vw,46px);margin:14px auto 16px;max-width:640px;color:#fff}
+  .news p{max-width:480px;margin:0 auto 28px;color:rgba(255,255,255,.85);font-size:15px}
+  .news form{display:flex;gap:10px;max-width:460px;margin:0 auto;flex-wrap:wrap}
+  .news input{flex:1;min-width:200px;border:0;border-radius:40px;padding:15px 22px;font-size:14px;font-family:inherit}
+  .news .btn-solid{background:var(--ink);color:#fff}
+  .news .btn-solid:hover{background:#000}
+  .news small{display:block;margin-top:16px;color:rgba(255,255,255,.7);font-size:12px}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--ink);color:rgba(244,238,229,.7);padding:64px 0 40px;margin-top:0}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px;margin-bottom:44px}
+  footer .mast{color:#fff;font-size:24px}
+  footer .mast small{color:var(--gold)}
+  footer p.about{font-size:13.5px;line-height:1.6;margin-top:16px;max-width:320px}
+  footer h5{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;font-weight:600;font-family:'Inter'}
+  footer ul{list-style:none}
+  footer ul li{margin-bottom:10px}
+  footer ul li a{font-size:13.5px;color:rgba(244,238,229,.7);transition:color .2s}
+  footer ul li a:hover{color:#fff}
+  .foot-bottom{border-top:1px solid rgba(244,238,229,.14);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12px;color:rgba(244,238,229,.5)}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:960px){
+    nav.main{display:none}
+    .foot-grid{grid-template-columns:1fr 1fr}
+    .burger{display:flex}
+    .lead,.host-grid,.rep-grid{grid-template-columns:1fr}
+    .grid3{grid-template-columns:repeat(2,1fr)}
+    .etq{grid-template-columns:repeat(2,1fr)}
+    .lead .ph,.jmap{order:-1}
+  }
+  @media(max-width:560px){
+    .grid3{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr;gap:28px}
+    .etq{grid-template-columns:1fr}
+    .host .stats{gap:24px}
+    .hero{min-height:78vh}
+  }
+</style>
+</head>
+<body>
+
+<!-- ========== TOP BAR ========== -->
+<header class="top">
+  <div class="wrap topgrid">
+    <div class="mast">Japan Bathing Journal<small>Sauna · Onsen · Sento</small></div>
+    <div style="display:flex;align-items:center;gap:26px">
+      <nav class="main">
+        <a href="#collections">Guides</a>
+        <a href="#lead">Culture</a>
+        <a href="#etiquette">Customs</a>
+        <a href="#host">Bespoke</a>
+      </nav>
+      <a class="lang note-cta" href="#reports">Reports</a>
+      <div class="burger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</header>
+
+<!-- ========== HERO ========== -->
+<section class="hero" style="padding-top:0;padding-bottom:0">
+  <div class="ph hero-slides" aria-hidden="true">
+    <div class="slide on" style="background-image:url('articles/img/koganeyu-shinjuku-2-mural-bath.jpg')" data-title="The design sento renaissance" data-href="articles/design-sento-renaissance.html"></div>
+    <div class="slide" style="background-image:url('articles/img/tattoo-friendly/daikokuyu-entrance.jpg')" data-title="Tattoo-friendly baths, mapped" data-href="articles/tattoo-friendly-baths.html"></div>
+    <div class="slide" style="background-image:url('articles/img/shumeikan/shumeikan-exterior.jpg')" data-title="The onsen that chose not to be a spa" data-href="articles/ubako-shumeikan.html"></div>
+    <div class="slide" style="background-image:url('articles/img/nuka-to-yuge/nuka-bran-mound-official.jpg')" data-title="The bath with no water" data-href="articles/nuka-to-yuge.html"></div>
+    <div class="slide" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/e/ec/Japanese_communal_bathhouse_SENTO_Sent%C5%8D_%E9%8A%AD%E6%B9%AF%E3%81%AE%E6%B5%B4%E5%AE%A4.jpg')" data-title="Why Japanese saunas have televisions" data-href="articles/sauna-television.html"></div>
+    <div class="slide" style="background-image:url('articles/img/taiyo-tsubomi/taiyo-tsubomi-exterior-petals-sky.jpg')" data-title="The sauna Japan took to its Expo" data-href="articles/expo-taiyo-no-tsubomi.html"></div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1743286159555-ea765c1bc5e6?q=80&w=1800&auto=format&fit=crop')" data-title="The boom that rebuilt the Japanese sauna" data-href="articles/japans-sauna-boom.html"></div>
+  </div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow">The Journal of Japanese Bathing</span>
+    <h1>The country where bathing is<br /><em>a culture, not a spa day.</em></h1>
+    <p class="lede">Onsen, sento and sauna — seen through the eyes of a Japanese sauna producer who designs private bathing itineraries for European travellers. Not a list of facilities. A way in.</p>
+    <div class="hero-cta">
+      <a href="#collections" class="btn btn-solid">Start with the guides →</a>
+      <a href="#host" class="btn btn-ghost">Travel with us</a>
+    </div>
+  </div>
+  <a class="slide-tag" id="slideTag" href="articles/design-sento-renaissance.html"><span class="st-label">Now showing</span> The design sento renaissance &rarr;</a>
+  <div class="scrollhint">Scroll</div>
+</section>
+
+<!-- ========== COLLECTIONS ========== -->
+<section id="collections">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow">Curated collections</span>
+        <h2>Where to go, and why it matters</h2>
+      </div>
+      <p>Six ways into Japan's bathing culture: distinctive places, practical guidance, and the ideas reshaping how Japan bathes.</p>
+    </div>
+    <div class="grid3">
+      <a class="card" href="articles/design-sento-renaissance.html"><div class="ph"></div><span class="kicker">Tokyo</span><h4>The design sento renaissance</h4><p>Koganeyu renovated once and the design press noticed. It opened a second location and the market should: the format is starting to repeat.</p></a>
+      <a class="card" href="articles/tattoo-friendly-baths.html"><div class="ph"></div><span class="kicker">Access</span><h4>Tattoo-friendly baths, mapped</h4><p>The single question every Western visitor asks. We keep an honest, updated list — no surprises at the door.</p></a>
+      <a class="card" href="articles/ubako-shumeikan.html"><div class="ph"></div><span class="kicker">Onsen</span><h4>The onsen that chose not to be a spa</h4><p>Shumeikan, at Ubako in Hakone, runs on soak and rest rather than a treatments menu — bathing as therapy, the older tradition.</p></a>
+      <a class="card" href="articles/nuka-to-yuge.html"><div class="ph"></div><span class="kicker">Off-map</span><h4>The bath with no water</h4><p>In Kyotango, Nuka to Yuge buries you to the neck in warm fermenting rice bran — heat from the same culture that gave the world koji.</p></a>
+      <a class="card" href="articles/sauna-television.html"><div class="ph"></div><span class="kicker">Culture</span><h4>Why Japanese saunas have televisions</h4><p>Walk into a classic Japanese sauna and a TV is playing above the stones. It isn't an accident — it's a design philosophy with a history.</p></a>
+      <a class="card" href="articles/expo-taiyo-no-tsubomi.html"><div class="ph"></div><span class="kicker">Experience</span><h4>The sauna Japan took to its Expo</h4><p>Taiyo no Tsubomi brought löyly to Expo 2025 in Osaka — and what happened after the gates closed says more than the queue did.</p></a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== LEAD FEATURE ========== -->
+<section id="lead" style="padding-top:0">
+  <div class="wrap">
+    <a class="lead hovimg" href="articles/japans-sauna-boom.html" style="display:grid">
+      <div class="ph"></div>
+      <div>
+        <span class="eyebrow">Market analysis · The Culture</span>
+        <h3>The boom that rebuilt <em>the Japanese sauna.</em></h3>
+        <p>Between 2019 and 2022, Japan's sauna market went from a private habit to a defined industry. What the numbers show about löyly, the cold plunge, and the rise of the heat masters — and what they don't yet prove.</p>
+        <p class="byline">By <b>Takayama Sauna</b> · Sauna producer, supervisor of award-winning facilities · 5 min read</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ========== ETIQUETTE (dark) ========== -->
+<section id="etiquette" class="dark">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow">Bathing 101</span>
+        <h2>What to know before you step inside</h2>
+      </div>
+      <p>The three things that make Western visitors hesitate at the door — answered plainly, so you can walk in like you belong.</p>
+    </div>
+    <div class="etq">
+      <div class="item"><div class="n">01</div><h4>Yes, you bathe nude</h4><p>Bathing nude is the norm in communal baths, which are single-sex almost everywhere. A small towel is fine for modesty — just keep it out of the water. For most first-timers, the awkwardness fades quickly.</p></div>
+      <div class="item"><div class="n">02</div><h4>The tattoo question</h4><p>Many baths still refuse tattoos — a legacy rule, not personal. Some welcome them openly; others accept approved cover patches or offer reservable private baths. We map the ones we've verified.</p></div>
+      <div class="item"><div class="n">03</div><h4>Wash before you soak</h4><p>The tub is for soaking, never washing. Sit, scrub and rinse fully at the shower stations first — the one rule that matters most in communal bathing.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== REGIONS ========== -->
+
+
+<!-- ========== HOST / CONCIERGE ========== -->
+<section id="host" class="host">
+  <div class="wrap">
+    <div class="host-grid">
+      <div class="jmap" aria-label="Map of Japan with our bathing destinations">
+        <img class="jm" src="articles/img/japan-map.svg" alt="Map of Japan" />
+        <div class="jchip" style="left:71%;top:55%"><span class="c" style="background-image:url('articles/img/tattoo-friendly/daikokuyu-entrance.jpg')"></span><span class="lbl">Tokyo · sento</span></div>
+        <div class="jchip" style="left:56%;top:73%"><span class="c" style="background-image:url('articles/img/shumeikan/shumeikan-exterior.jpg')"></span><span class="lbl">Hakone · tōji</span></div>
+        <div class="jchip" style="left:33%;top:56%"><span class="c" style="background-image:url('articles/img/nuka-to-yuge/nuka-bran-mound-official.jpg')"></span><span class="lbl">Kyotango · enzyme bath</span></div>
+        <div class="jchip" style="left:41%;top:77%"><span class="c" style="background-image:url('articles/img/taiyo-tsubomi/taiyo-tsubomi-exterior-petals-sky.jpg')"></span><span class="lbl">Osaka · sauna</span></div>
+      </div>
+      <div>
+        <span class="eyebrow">Travel with the editor</span>
+        <h2>We design<br /><em>bathing journeys across Japan.</em></h2>
+        <p>This journal isn't written from a desk. Its editor is a working sauna producer who guides visiting guests through Japan's baths — navigating reservations, house rules and first-come queues, and explaining the etiquette as you go.</p>
+        <p>If you'd rather not decode it alone, we build private bathing itineraries: the right baths, the right order, the right pace — tailored to your route, schedule and interests.</p>
+        <div class="stats">
+          <div class="s"><div class="num">40+</div><div class="cap">Vetted baths, saunas &amp; ryokan</div></div>
+          <div class="s"><div class="num">2023</div><div class="cap">Saunachelin-awarded venue supervised</div></div>
+        </div>
+        <a href="https://www.linkedin.com/in/se-ju-takayama-a38857273/" class="btn btn-hinoki" target="_blank" rel="noopener">Request a bespoke itinerary</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PREMIUM REPORTS (NOTE) ========== -->
+<section id="reports" class="reports">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow">Industry insights · Paid · In Japanese</span>
+        <h2>For operators, investors &amp; industry professionals</h2>
+      </div>
+      <p>The consumer journal is free. Our paid writing for the trade — industry trends, opening know-how, and regional case studies from inside Japan's sauna boom — is published on note, in Japanese.</p>
+    </div>
+    <div class="rep-grid">
+      <article class="rep-feature">
+        <div class="ph"></div>
+        <div class="body">
+          <span class="eyebrow">Flagship magazine · Japanese</span>
+          <h3>The Japanese Sauna Market, Tracked</h3>
+          <p>A running, marketing-eye read on Japan's sauna market — six dispatches and counting, written in Japanese by the journal's editor, a working sauna producer.</p>
+          <div class="price" style="margin-bottom:18px"><span class="amt" style="color:var(--gold)">¥980</span><span class="per" style="color:rgba(244,238,229,.6)">per article on note</span></div>
+          <a href="https://note.com/takayamasauna/m/m43af7664493c" class="note-badge" target="_blank" rel="noopener">Buy on note →</a>
+        </div>
+      </article>
+      <div class="rep-list">
+        <article class="rep-item">
+          <div class="meta">Magazine · For operators</div>
+          <h4>What to Know Before You Open a Sauna</h4>
+          <p>Five field notes on opening a sauna in Japan — the decisions the editor wishes more operators got right the first time.</p>
+          <a href="https://note.com/takayamasauna/m/m8baa5f01e1be" class="seclink" target="_blank" rel="noopener">Read the magazine</a>
+        </article>
+        <article class="rep-item">
+          <div class="meta">Magazine · Regional Japan</div>
+          <h4>The Frontline of Local Japanese Sauna</h4>
+          <p>A running study of sauna culture found nowhere but Japan's regions — four dispatches on where the format goes next.</p>
+          <a href="https://note.com/takayamasauna/m/mac8c5844a561" class="seclink" target="_blank" rel="noopener">Read the magazine</a>
+        </article>
+        <article class="rep-item">
+          <div class="meta">Magazine · Overseas intelligence</div>
+          <h4>The Frontline of Sauna Culture Abroad</h4>
+          <p>Primary reporting and commentary on how sauna culture is developing outside Japan, for readers tracking the boom beyond its home market.</p>
+          <a href="https://note.com/takayamasauna/m/m3a9cbd957d2e" class="seclink" target="_blank" rel="noopener">Read the magazine</a>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== NEWSLETTER ========== -->
+<section id="dispatch" style="padding-top:0">
+  <div class="wrap">
+    <div class="news">
+      <span class="eyebrow">The dispatch · In preparation</span>
+      <h2>One bath, one story,<br />coming to your inbox.</h2>
+      <p>We're preparing an English-language dispatch on Japanese baths and saunas — one place per issue, with the practical notes to plan a visit. Join the list and you'll hear when it launches.</p>
+      <a class="btn btn-solid" href="https://docs.google.com/forms/d/e/1FAIpQLSf7F8We6jY85dhn3xSgdHvAaTYZ591QqmMB1XFNlBvVpNiGCw/viewform" target="_blank" rel="noopener">Join the list</a>
+      <small>Not launched yet — occasional updates only, and you can unsubscribe anytime.</small>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="mast" style="font-size:19px">Japan Bathing Journal<small>Sauna · Onsen · Sento</small></div>
+        <p class="about">A guide to Japanese bathing culture for readers worldwide — sauna, onsen and sento. Reported in Japan, written in English.</p>
+      </div>
+      <div>
+        <h5>Read</h5>
+        <ul><li><a href="#collections">Collections</a></li><li><a href="#etiquette">Bathing 101</a></li><li><a href="#lead">Culture</a></li></ul>
+      </div>
+      <div>
+        <h5>Work with us</h5>
+        <ul><li><a href="https://note.com/takayamasauna" target="_blank" rel="noopener">Paid reports (note)</a></li><li><a href="https://www.linkedin.com/in/se-ju-takayama-a38857273/" target="_blank" rel="noopener">About the editor</a></li></ul>
+      </div>
+      <div>
+        <h5>Follow</h5>
+        <ul><li><a href="https://www.instagram.com/takayamasauna/" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://note.com/takayamasauna" target="_blank" rel="noopener">note</a></li><li><a href="https://x.com/takayamasauna" target="_blank" rel="noopener">X</a></li><li><a href="#dispatch">Newsletter</a></li></ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Japan Bathing Journal · Published by totonoete inc.</span>
+      <span>Made in Japan · 日本の入浴を、世界の言葉で。</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var slides = document.querySelectorAll('.hero-slides .slide');
+  var tag = document.getElementById('slideTag');
+  if (!slides.length || slides.length < 2) return;
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var i = 0;
+  setInterval(function(){
+    slides[i].classList.remove('on');
+    i = (i + 1) % slides.length;
+    slides[i].classList.add('on');
+    if (tag) {
+      tag.href = slides[i].getAttribute('data-href');
+      tag.innerHTML = '<span class="st-label">Now showing</span> ' + slides[i].getAttribute('data-title') + ' &rarr;';
+    }
+  }, 5000);
+})();
+</script>
+</body>
+</html>
