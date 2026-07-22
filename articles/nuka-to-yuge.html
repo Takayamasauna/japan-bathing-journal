@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Bath With No Water — Japan Bathing Journal</title>
+<meta name="description" content="In Kyotango, a mound of fermenting rice bran does the job hot water usually does: the heat itself contains no water. You're warmed from the outside in by fermenting bran, then shower it off afterward. Here's how Japan's fermentation culture ended up producing a bath that runs on heat alone — and why it's worth the trip to find it." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,400..600&family=Inter:wght@300;400;500;600&family=Noto+Serif+JP:wght@300;500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --paper:#F4EEE5;
+    --paper-2:#EDE4D7;
+    --ink:#20180F;
+    --ink-soft:#5A4E40;
+    --line:#D6C9B6;
+    --hinoki:#9C5E33;
+    --hinoki-deep:#7A431F;
+    --steam:#8FA0A0;
+    --gold:#B98A3E;
+    --shadow:0 30px 60px -30px rgba(32,24,15,.45);
+    --maxw:1240px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',system-ui,sans-serif;
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:400;line-height:1.05;letter-spacing:-.01em}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+
+  .ph{position:relative;overflow:hidden;background:#cdbfa9}
+  .ph::before{content:"";position:absolute;inset:0;background-size:cover;background-position:center;
+    background-image:var(--img);filter:saturate(.86) contrast(1.02);transform:scale(1.01)}
+  .ph::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(32,24,15,.06),rgba(32,24,15,.30));mix-blend-mode:multiply}
+
+  .eyebrow{font-family:'Inter';font-size:11.5px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--hinoki)}
+
+  /* ---------- TOP BAR ---------- */
+  header.top{position:sticky;top:0;z-index:60;background:rgba(244,238,229,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .topgrid{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .mast{font-family:'Fraunces';font-weight:600;font-size:16.5px;letter-spacing:.12em;text-transform:uppercase;line-height:1.2}
+  .mast small{display:block;font-family:'Inter';font-weight:600;font-size:9px;letter-spacing:.34em;color:var(--hinoki);margin-top:2px;text-transform:uppercase}
+  nav.main{display:flex;gap:26px;align-items:center}
+  nav.main a{font-size:13px;font-weight:500;letter-spacing:.02em;color:var(--ink-soft);transition:color .2s}
+  nav.main a:hover{color:var(--hinoki)}
+  .lang{font-size:11px;font-weight:600;letter-spacing:.12em;border:1px solid var(--line);border-radius:20px;padding:5px 11px;color:var(--ink-soft)}
+  .note-cta{background:var(--hinoki);border-color:var(--hinoki);color:#fff;letter-spacing:.06em;transition:background .2s,transform .2s}
+  .note-cta:hover{background:var(--hinoki-deep);transform:translateY(-1px)}
+
+  /* ---------- ARTICLE HERO ---------- */
+  .arthero{position:relative;min-height:72vh;display:flex;align-items:flex-end;color:#fff;
+    --img:url('img/nuka-to-yuge/nuka-bran-mound-official.jpg')}
+  .arthero .ph{position:absolute;inset:0}
+  .arthero .ph::after{background:linear-gradient(180deg,rgba(32,24,15,.18) 0%,rgba(32,24,15,.20) 40%,rgba(32,24,15,.78) 100%)}
+  .arthero-inner{position:relative;z-index:2;padding:clamp(40px,6vw,80px) 0;max-width:860px}
+  .arthero .eyebrow{color:#E8C98E}
+  .arthero h1{font-size:clamp(36px,5.6vw,68px);margin:16px 0 20px}
+  .arthero p.deck{font-size:clamp(15px,1.4vw,19px);max-width:680px;color:rgba(255,255,255,.88);font-weight:300}
+  .arthero .byline{margin-top:26px;font-size:13px;color:rgba(255,255,255,.75);letter-spacing:.02em}
+  .arthero .byline b{color:#fff;font-weight:600}
+
+  /* ---------- ARTICLE BODY ---------- */
+  article.body{padding:clamp(48px,6vw,88px) 0}
+  .prose{max-width:720px;margin:0 auto}
+  .prose p{font-size:17px;line-height:1.75;color:var(--ink);margin-bottom:26px;font-weight:300}
+  .prose p b,.prose p strong{font-weight:600}
+  .prose h2{font-size:clamp(26px,3vw,36px);margin:56px 0 24px}
+  .prose .lead-p::first-letter{font-family:'Fraunces';font-size:64px;float:left;line-height:.85;padding:6px 12px 0 0;color:var(--hinoki)}
+  .prose em{font-style:italic}
+  .prose a{color:var(--hinoki)}
+  .prose .sig{font-family:'Fraunces';font-size:17px;color:var(--ink-soft);margin-top:44px;border-top:1px solid var(--line);padding-top:26px}
+
+  figure.artph{margin:44px auto;max-width:920px}
+  figure.artph .ph{aspect-ratio:16/9;border-radius:4px}
+  figure.artph figcaption{font-size:12px;color:var(--ink-soft);letter-spacing:.03em;margin-top:10px}
+  figure.artph figcaption a{color:var(--hinoki)}
+
+  /* ---------- NEXT / BACK ---------- */
+  .backbar{background:var(--paper-2);padding:36px 0}
+  .backbar .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
+  .backbar a{font-size:13px;font-weight:600;letter-spacing:.05em;color:var(--hinoki)}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--ink);color:rgba(244,238,229,.7);padding:48px 0 36px}
+  .foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12px;color:rgba(244,238,229,.5)}
+
+  @media(max-width:960px){nav.main{display:none}}
+</style>
+</head>
+<body>
+
+<!-- ========== TOP BAR ========== -->
+<header class="top">
+  <div class="wrap topgrid">
+    <a href="../index.html" class="mast">Japan Bathing Journal<small>Sauna · Onsen · Sento</small></a>
+    <div style="display:flex;align-items:center;gap:26px">
+      <nav class="main">
+        <a href="../index.html#collections">Guides</a>
+        <a href="../index.html#lead">Culture</a>
+        <a href="../index.html#etiquette">Customs</a>
+        <a href="../index.html#host">Bespoke</a>
+      </nav>
+      <a class="lang note-cta" href="../index.html#reports">Reports</a>
+    </div>
+  </div>
+</header>
+
+<!-- ========== ARTICLE HERO ========== -->
+<section class="arthero">
+  <div class="ph"></div>
+  <div class="wrap arthero-inner">
+    <span class="eyebrow">Off-map · Kyotango</span>
+    <h1>The Bath With<br />No Water</h1>
+    <p class="deck">In Kyotango, a mound of fermenting rice bran does the job hot water usually does: the heat itself contains no water. You're warmed from the outside in by fermenting bran, then shower it off afterward. Here's how Japan's fermentation culture ended up producing a bath that runs on heat alone — and why it's worth the trip to find it.</p>
+    <p class="byline">By <b>Takayama Sauna</b>, Editor-in-Chief · Sauna producer, supervisor of award-winning facilities · 5 min read · July 2026</p>
+  </div>
+</section>
+
+<!-- ========== BODY ========== -->
+<article class="body">
+  <div class="wrap">
+    <div class="prose">
+      <p class="lead-p">There is no faucet in this room, no showerhead, no pool. What waits for you is a long wooden trough of pale, warm rice bran, and once you're inside, a staff member buries you in it — hands to chin, only your face left above the surface. There is no heater here either. The mound itself is generating the heat, one microbe generation at a time, the same way a compost pile warms up on its own in the corner of a garden.</p>
+      <p>One visitor, reviewing the experience online, called it "extraordinary" to feel the <em>nuka</em> — rice bran — close in over the whole body. That's a stranger's word, not this publication's: everything here is built from the facility's own published materials and independent reporting, not a first-person soak — said once, here, rather than repeated below. What is documented and verifiable is the mechanism, and it's the mechanism that makes this style of bathing genuinely unusual: a <em>kōso-buro</em>, or enzyme bath, runs on fermentation heat alone. No gas line, no electric element, no boiler in the basement — just a trough of live, working bran that you climb into, then climb back out of to rinse off under running water.</p>
+      <p>Kyotango, a city on the Sea of Japan coast in northern Kyoto Prefecture, is home to a facility called <em>Nuka to Yuge</em> — "bran and steam" — that pairs the bran bath with something more familiar: a set of private saunas. The facility itself claims a distinction worth noting, with the caveat that it's the operator's claim and not an independently verified survey of the industry: the first facility anywhere to offer nuka enzyme bathing and Finnish-style private sauna together under one roof. Search for Nuka to Yuge in English and you'll find little beyond a TripAdvisor listing and a MATCHA guide entry, which is the gap this piece is written into.</p>
+
+      <h2>Fermentation as a heat source</h2>
+      <p>The rice bran used at Nuka to Yuge is sourced entirely from Kyotango-area farms, according to the facility. It's the same raw material that goes into <em>nukazuke</em> — the rice-bran pickles found in Japanese kitchens for centuries — and it's tempting to call the bath an extension of that tradition. It isn't quite. Nukazuke ferments slowly through lactic-acid bacteria at room temperature; it barely warms up at all. The heat here comes from a different, faster process: an aerobic fermentation closer to an active compost pile, running hot rather than merely warm as the microbes tear through the bran. Both belong to the same family of kitchen fermentation; it's the compost-like process, not the pickling one, that does the heating. Nobody at Nuka to Yuge has told us, on the record, that the bath was conceived as an extension of the pickling tradition, and this connection is our own reading of it, not the facility's marketing copy.</p>
+      <p>A visit follows a fixed structure, according to the facility's own FAQ: roughly ten minutes of counseling before you go in, twenty to thirty minutes actually buried in the fermenting bran, and twenty minutes afterward to rinse off — call it an hour, start to finish, tucked in around whatever time you spend next door in the sauna.</p>
+    </div>
+
+    <figure class="artph">
+      <div class="ph" style="--img:url('img/nuka-to-yuge/private-sauna-room-official.jpg')"></div>
+      <figcaption>One of Nuka to Yuge's private, reservation-only Finnish-style sauna rooms — the "next door" this piece keeps referring back to. Photo: Nuka to Yuge official website, <a href="https://nuka-yuge.com/nukayugeset">nuka-yuge.com/nukayugeset</a>.</figcaption>
+    </figure>
+
+    <div class="prose">
+      <p>Here is where the piece has to slow down. Nuka to Yuge, in partnership with a clinic connected to its founder, ran a small in-house study on the bath's effects on circulation, sleep, and pain, and the facility reports that it took an award at a sauna-focused academic gathering. Readers shouldn't take the findings as settled medical fact, and neither do we: the study ran through a clinic tied to the facility, it hasn't gone through independent peer review as far as we could confirm, and the society that recognized it is a young one, not part of Japan's mainstream medical establishment. What we can say is that the facility reports these results, and that the broader enzyme-bath industry in Japan makes similar claims — better circulation, warmer extremities, softer skin from the bran's natural oils — as standard trade language, the same way any spa segment talks about its own benefits. Treat it as the pitch, not the peer-reviewed result. The founder, an orthopedic surgeon by training who opened the facility in 2022, built both the business and its research program around that belief.</p>
+
+      <h2>Kyotango, worth the trip</h2>
+      <p>Kyotango is not on the way to anywhere. It sits at the far northern edge of Kyoto Prefecture, on the coastline the tourism board brands as "Kyoto by the Sea," well removed from the temples and machiya streets most visitors picture when they hear the prefecture's name. Getting there from central Kyoto takes real effort — a transfer or two by rail, or a highway drive — and that's the honest framing before anyone starts selling you on the destination.</p>
+      <p>The case for making the trip is the pairing itself. Nuka to Yuge runs the enzyme bath alongside five private, reservation-only saunas — Finnish-style rooms where guests pour their own <em>löyly</em> (water over the stove's stones), each with its own character, built for one party at a time rather than a shared room. That private format lets the facility commit to something a lot of famous sauna houses in Japan won't: its FAQ (<a href="https://nuka-yuge.com/qanda">nuka-yuge.com/qanda</a>) states plainly that tattooed guests are welcome, full stop, across all five rooms. It's a useful data point for our companion guide, <a href="tattoo-friendly-baths.html"><em>Tattoo-Friendly Baths, Mapped</em></a>, on which Japanese bathing facilities do and don't admit tattoos — private-room operators, unconstrained by a shared bathing area's house politics, sit toward the permissive end of that spectrum, and this is another confirmed example. Add the region's reputation, well established locally, as one of Kyoto Prefecture's stronger seafood and produce areas, and the enzyme bath stops being the sole reason to go.</p>
+    </div>
+
+    <figure class="artph">
+      <div class="ph" style="--img:url('img/nuka-to-yuge/kyotango-coast-official.jpg')"></div>
+      <figcaption>The Sea of Japan coast in Kyotango — the "Kyoto by the Sea" stretch of coastline Nuka to Yuge calls home. Photo: Nuka to Yuge official website, <a href="https://nuka-yuge.com/kyotango">nuka-yuge.com/kyotango</a>.</figcaption>
+    </figure>
+
+    <div class="prose">
+      <h2>If you go, and where this piece stops</h2>
+      <p>Nuka to Yuge sells the bath and sauna together as a set plan, not as separately priced items: ¥18,000 for the shorter pairing (about two and a half hours, with a ninety-minute private sauna) or ¥20,000 for the longer one (about three and a half hours, with two and a half hours in the sauna), per person, tax included — confirmed against the facility's set-plan page, <a href="https://nuka-yuge.com/nukayugeset">nuka-yuge.com/nukayugeset</a>, 17 July 2026. Booking three days ahead is recommended, through the official LINE account or by phone, per the same FAQ (<a href="https://nuka-yuge.com/qanda">nuka-yuge.com/qanda</a>), though same-day slots open up if availability allows. Cash, card, and QR payment are all accepted. There's no restaurant on site, drinks only, so plan to eat nearby before or after. Posted operating hours weren't available on the official site as of this writing — confirm the day and time directly when you book rather than trust a secondhand listing.</p>
+      <p>That confirmation gap is a small example of a larger one: what's here is the structure of the experience, not a verdict on whether the science holds up or the ground-level detail of stringing Kyotango into a real itinerary. That's the layer our paid reporting and Bespoke trip-planning service are built to add — turning a single strong stop into a route worth the flight.</p>
+      <p class="sig">— Takayama Sauna, Editor-in-Chief</p>
+      <p style="font-size:11.5px;color:var(--ink-soft);margin-top:14px">Lead photography: the mound of fermenting rice bran inside Nuka to Yuge's kōso-buro. Photo: Nuka to Yuge official website, <a href="https://nuka-yuge.com/nukayugeset">nuka-yuge.com/nukayugeset</a>.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ========== BACK BAR ========== -->
+<div class="backbar">
+  <div class="wrap">
+    <a href="../index.html">← Back to the Journal</a>
+    <a href="tattoo-friendly-baths.html">Read next: Tattoo-Friendly Baths, Mapped →</a>
+  </div>
+</div>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="wrap foot-bottom">
+    <span>© 2026 Japan Bathing Journal · Published by totonoete inc.</span>
+    <span>Made in Japan · 日本の入浴を、世界の言葉で。</span>
+  </div>
+</footer>
+
+</body>
+</html>

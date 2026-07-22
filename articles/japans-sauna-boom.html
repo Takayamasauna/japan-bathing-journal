@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Boom That Rebuilt the Japanese Sauna — Japan Bathing Journal</title>
+<meta name="description" content="Between 2019 and 2022, Japan's sauna market shifted from a private habit to a defined industry, with its own emerging standard. Here is what the data shows — and what it does not yet prove." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,400..600&family=Inter:wght@300;400;500;600&family=Noto+Serif+JP:wght@300;500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --paper:#F4EEE5;
+    --paper-2:#EDE4D7;
+    --ink:#20180F;
+    --ink-soft:#5A4E40;
+    --line:#D6C9B6;
+    --hinoki:#9C5E33;
+    --hinoki-deep:#7A431F;
+    --steam:#8FA0A0;
+    --gold:#B98A3E;
+    --shadow:0 30px 60px -30px rgba(32,24,15,.45);
+    --maxw:1240px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',system-ui,sans-serif;
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:400;line-height:1.05;letter-spacing:-.01em}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+
+  .ph{position:relative;overflow:hidden;background:#cdbfa9}
+  .ph::before{content:"";position:absolute;inset:0;background-size:cover;background-position:center;
+    background-image:var(--img);filter:saturate(.86) contrast(1.02);transform:scale(1.01)}
+  .ph::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(32,24,15,.06),rgba(32,24,15,.30));mix-blend-mode:multiply}
+
+  .eyebrow{font-family:'Inter';font-size:11.5px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--hinoki)}
+
+  /* ---------- TOP BAR ---------- */
+  header.top{position:sticky;top:0;z-index:60;background:rgba(244,238,229,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .topgrid{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .mast{font-family:'Fraunces';font-weight:600;font-size:16.5px;letter-spacing:.12em;text-transform:uppercase;line-height:1.2}
+  .mast small{display:block;font-family:'Inter';font-weight:600;font-size:9px;letter-spacing:.34em;color:var(--hinoki);margin-top:2px;text-transform:uppercase}
+  nav.main{display:flex;gap:26px;align-items:center}
+  nav.main a{font-size:13px;font-weight:500;letter-spacing:.02em;color:var(--ink-soft);transition:color .2s}
+  nav.main a:hover{color:var(--hinoki)}
+  .lang{font-size:11px;font-weight:600;letter-spacing:.12em;border:1px solid var(--line);border-radius:20px;padding:5px 11px;color:var(--ink-soft)}
+  .note-cta{background:var(--hinoki);border-color:var(--hinoki);color:#fff;letter-spacing:.06em;transition:background .2s,transform .2s}
+  .note-cta:hover{background:var(--hinoki-deep);transform:translateY(-1px)}
+
+  /* ---------- ARTICLE HERO ---------- */
+  .arthero{position:relative;min-height:72vh;display:flex;align-items:flex-end;color:#fff;
+    --img:url('https://images.unsplash.com/photo-1743286159555-ea765c1bc5e6?q=80&w=1800&auto=format&fit=crop')}
+  .arthero .ph{position:absolute;inset:0}
+  .arthero .ph::after{background:linear-gradient(180deg,rgba(32,24,15,.18) 0%,rgba(32,24,15,.20) 40%,rgba(32,24,15,.78) 100%)}
+  .arthero-inner{position:relative;z-index:2;padding:clamp(40px,6vw,80px) 0;max-width:860px}
+  .arthero .eyebrow{color:#E8C98E}
+  .arthero h1{font-size:clamp(36px,5.6vw,68px);margin:16px 0 20px}
+  .arthero p.deck{font-size:clamp(15px,1.4vw,19px);max-width:680px;color:rgba(255,255,255,.88);font-weight:300}
+  .arthero .byline{margin-top:26px;font-size:13px;color:rgba(255,255,255,.75);letter-spacing:.02em}
+  .arthero .byline b{color:#fff;font-weight:600}
+
+  /* ---------- ARTICLE BODY ---------- */
+  article.body{padding:clamp(48px,6vw,88px) 0}
+  .prose{max-width:720px;margin:0 auto}
+  .prose p{font-size:17px;line-height:1.75;color:var(--ink);margin-bottom:26px;font-weight:300}
+  .prose p b,.prose p strong{font-weight:600}
+  .prose h2{font-size:clamp(26px,3vw,36px);margin:56px 0 24px}
+  .prose .lead-p::first-letter{font-family:'Fraunces';font-size:64px;float:left;line-height:.85;padding:6px 12px 0 0;color:var(--hinoki)}
+  .prose em{font-style:italic}
+  .prose .sig{font-family:'Fraunces';font-size:17px;color:var(--ink-soft);margin-top:44px;border-top:1px solid var(--line);padding-top:26px}
+  .prose .cta-report{border:1px solid var(--line);border-left:3px solid var(--hinoki);border-radius:4px;padding:20px 24px;background:#fff;font-size:15px}
+  .prose .cta-report a{color:var(--hinoki);font-weight:600}
+
+  figure.artph{margin:44px auto;max-width:920px}
+  figure.artph .ph{aspect-ratio:16/9;border-radius:4px}
+  figure.artph figcaption{font-size:12px;color:var(--ink-soft);letter-spacing:.03em;margin-top:10px}
+  figure.artph figcaption a{color:var(--hinoki)}
+
+  /* ---------- NEXT / BACK ---------- */
+  .backbar{background:var(--paper-2);padding:36px 0}
+  .backbar .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
+  .backbar a{font-size:13px;font-weight:600;letter-spacing:.05em;color:var(--hinoki)}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--ink);color:rgba(244,238,229,.7);padding:48px 0 36px}
+  .foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12px;color:rgba(244,238,229,.5)}
+
+  @media(max-width:960px){nav.main{display:none}}
+</style>
+</head>
+<body>
+
+<!-- ========== TOP BAR ========== -->
+<header class="top">
+  <div class="wrap topgrid">
+    <a href="../index.html" class="mast">Japan Bathing Journal<small>Sauna · Onsen · Sento</small></a>
+    <div style="display:flex;align-items:center;gap:26px">
+      <nav class="main">
+        <a href="../index.html#collections">Guides</a>
+        <a href="../index.html#lead">Culture</a>
+        <a href="../index.html#etiquette">Customs</a>
+        <a href="../index.html#host">Bespoke</a>
+      </nav>
+      <a class="lang note-cta" href="../index.html#reports">Reports</a>
+    </div>
+  </div>
+</header>
+
+<!-- ========== ARTICLE HERO ========== -->
+<section class="arthero">
+  <div class="ph"></div>
+  <div class="wrap arthero-inner">
+    <span class="eyebrow">Market analysis · The Culture</span>
+    <h1>The Boom That Rebuilt<br />the Japanese Sauna</h1>
+    <p class="deck">Between 2019 and 2022, Japan's sauna market shifted from a private habit to a defined industry, with its own emerging standard. Here is what the data shows — and what it does not yet prove.</p>
+    <p class="byline">By <b>Takayama Sauna</b>, Editor-in-Chief · Sauna producer, supervisor of award-winning facilities · 5 min read · July 2026</p>
+  </div>
+</section>
+
+<!-- ========== BODY ========== -->
+<article class="body">
+  <div class="wrap">
+    <div class="prose">
+      <p class="lead-p">Did Japan's sauna market actually expand after 2020, or did an already-serious niche simply become louder and more photographed? That is the more useful question, and the one this piece takes up with structure rather than anecdote.</p>
+      <p>The account below draws on facility-count data I have tracked since 2019 and published in Japanese-language market reviews, cross-referenced against the cultural events any observer of the period would recognize — the 2019 television adaptation of the manga <em>Sadō</em>, most notably. My reading is that of a market participant rather than a neutral outsider: I have advised sauna operators on growth strategy for most of this period. That should be disclosed up front, and it is the reason the emphasis here falls on numbers that can be defined and dated rather than on impression.</p>
+
+      <h2>The quiet base</h2>
+      <p>Before 2020, Japan's sauna facilities ran on a specific technical default: dry heat and low humidity. Self-service <em>löyly</em> — the Finnish-derived practice of pouring water over the stove's stones yourself — was close to nonexistent: a search of facility listings from the period turned up fewer than forty advertising it, against an industry numbering in the thousands. The cold plunge followed the same restraint: water was often tepid, a formality between rounds of heat rather than a deliberate half of the cycle, inside a <em>sento</em> (neighborhood public bath) treated as everyday infrastructure rather than an experience. Aufguss, the German-rooted ritual of choreographed towel-waving, and the <em>neppashi</em> (heat-wave master) who performs it, already existed in this period, but neither operated at any scale beyond a handful of dedicated facilities. It was a real culture. It was not yet a defined market.</p>
+    </div>
+
+    <figure class="artph">
+      <div class="ph" style="--img:url('https://upload.wikimedia.org/wikipedia/commons/6/62/Modern_sento_at_Takayama.jpg')"></div>
+      <figcaption>A modern sento in Gifu Prefecture — the neighborhood bath as everyday infrastructure. Photo: <a href="https://commons.wikimedia.org/wiki/File:Modern_sento_at_Takayama.jpg">Alexey Kopytko</a>, CC BY 2.0, via Wikimedia Commons.</figcaption>
+    </figure>
+
+    <div class="prose">
+      <h2>2019–2021: the chain reaction</h2>
+      <p>The shift did not start with an industry decision. Its most visible trigger was a comic: <em>Sadō</em> — "The Way of the Sauna," Katsuki Tanaka's manga about the ritual and philosophy of sauna bathing — had built a readership for years before it reached the platform that mattered: a television drama adaptation in 2019. <em>Sadō</em> functioned as an amplifier, not a sole cause. It gave an existing practice a vocabulary — <em>totonou</em> (the state of deep clarity that follows a full sauna–cold–rest cycle) went from an insider's term to something colleagues could say to each other and be understood — and vocabulary is what let variety shows, lifestyle media, and corporate sauna promotions build on the culture at speed.</p>
+      <p>What followed is visible in the tracking numbers. Facilities listing self-service löyly went from roughly 37 in early 2019 to 731 by January 2022, and to 1,347 by that November — listings, not construction counts, from a search run against Sauna Ikitai, Japan's largest facility-review platform, whose own coverage also grew over the same period. The shift accelerated through the pandemic years, when outdoor and private sauna formats were among the few leisure categories still open under Japan's pandemic-era restrictions.</p>
+
+      <h2>Three structural shifts inside the room</h2>
+      <p>Put the timeline aside and look at what physically changed inside a Japanese sauna, because this is the part general coverage of the boom tends to skip.</p>
+      <p><strong>Self-service löyly went from prohibited to expected.</strong> The listing count above traces that reversal.</p>
+      <p><strong>The cold plunge became a genuine engineering investment.</strong> Chillers, better insulation, and a wider industry recognition that the cold side of the cycle is half the experience, not a formality, have replaced the tepid plunge at the facilities leading the boom with water kept genuinely cold. Chiller installation is now one of the more expensive line items in a modern sauna build-out.</p>
+    </div>
+
+    <figure class="artph">
+      <div class="ph" style="--img:url('https://images.pexels.com/photos/34943128/pexels-photo-34943128.jpeg?auto=compress&cs=tinysrgb&w=1600')"></div>
+      <figcaption>A hinoki cold-plunge tub in Tokyo — the cold half of the cycle, taken seriously. Photo: Jeremy Wong via Pexels.</figcaption>
+    </figure>
+
+    <div class="prose">
+      <p><strong>Aufguss moved from a niche service to the center of the room.</strong> As the audience widened, so did demand for intensity — not just heat to sit in, but heat as performance. Aufguss and the neppashi who leads it went from a fringe offering at a small number of facilities to a headline draw at flagship venues, with sessions now scheduled, timed, and marketed much like a live show.</p>
+
+      <h2>A market with a definition</h2>
+      <p>Three structural changes converged, in my reading, into something the pre-2020 market didn't have: a common competitive specification. Among the newer destination facilities, competition now runs, in large part, on the same three axes — a room that reliably gets and holds heat, a plunge that is genuinely cold, and a löyly or Aufguss program that turns the middle of the session into something closer to choreography than endurance. That trinity did not operate as a shared standard before the boom; operators competed on ambience or heritage. Now they also compete on a specification.</p>
+    </div>
+
+    <figure class="artph">
+      <div class="ph" style="--img:url('https://images.unsplash.com/photo-1741601274134-fa98352f1c95?q=80&w=1600&auto=format&fit=crop')"></div>
+      <figcaption>Water meets stone — the löyly moment that was rare in Japan before 2020 and is close to a baseline expectation now. Photo: HUUM via Unsplash.</figcaption>
+    </figure>
+
+    <div class="prose">
+      <p class="cta-report">The numbers above are a practitioner's field tracking — compiled by the author, published in Japanese-language market reviews, checked where possible against public search-index tools — not an independently audited market report. Whether the underlying user base actually expanded, or an already-serious niche simply became more visible, is a question these metrics don't settle. Verifying that claim — across the full data set, the methodology, and the user base — is the work taken up in the author's ongoing Japanese-language market analysis, published <a href="../index.html#reports">on note</a>.</p>
+      <p>None of the above needs to stay theoretical for a visitor. Go in quiet, watch how regulars move before you move, and give the full cycle — heat, cold, and whatever form of löyly or Aufguss the house runs — a real chance before deciding what you think of it. The room described in the first section of this piece still exists in places. The newer model now runs alongside it — and it is the one worth booking a trip for.</p>
+      <p class="sig">— Takayama Sauna, Editor-in-Chief</p>
+      <p style="font-size:11.5px;color:var(--ink-soft);margin-top:14px">Lead photography by Anne Nygård on Unsplash.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ========== BACK BAR ========== -->
+<div class="backbar">
+  <div class="wrap">
+    <a href="../index.html">← Back to the Journal</a>
+    <a href="../index.html#reports">Next: Industry insights on note →</a>
+  </div>
+</div>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="wrap foot-bottom">
+    <span>© 2026 Japan Bathing Journal · Published by totonoete inc.</span>
+    <span>Made in Japan · 日本の入浴を、世界の言葉で。</span>
+  </div>
+</footer>
+
+</body>
+</html>
