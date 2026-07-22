@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Onsen That Refuses to Be a Spa — Japan Bathing Journal</title>
+<link rel="icon" type="image/png" href="../brand/favicon-source.png" />
+<meta name="description" content="In March 2026, a day-use tōji bathhouse in the hills above Hakone posted a notice on its own site: it doesn't want day-spa customers, only people who need to rest and heal. It isn't rejecting Japan's bathing boom — it's asking who that boom is actually for." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,400..600&family=Inter:wght@300;400;500;600&family=Noto+Serif+JP:wght@300;500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --paper:#F4EEE5;
+    --paper-2:#EDE4D7;
+    --ink:#20180F;
+    --ink-soft:#5A4E40;
+    --line:#D6C9B6;
+    --hinoki:#9C5E33;
+    --hinoki-deep:#7A431F;
+    --steam:#8FA0A0;
+    --gold:#B98A3E;
+    --shadow:0 30px 60px -30px rgba(32,24,15,.45);
+    --maxw:1240px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',system-ui,sans-serif;
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:400;line-height:1.05;letter-spacing:-.01em}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+
+  .ph{position:relative;overflow:hidden;background:#cdbfa9}
+  .ph::before{content:"";position:absolute;inset:0;background-size:cover;background-position:center;
+    background-image:var(--img);filter:saturate(.86) contrast(1.02);transform:scale(1.01)}
+  .ph::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(32,24,15,.06),rgba(32,24,15,.30));mix-blend-mode:multiply}
+
+  .eyebrow{font-family:'Inter';font-size:11.5px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--hinoki)}
+
+  /* ---------- TOP BAR ---------- */
+  header.top{position:sticky;top:0;z-index:60;background:rgba(244,238,229,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .topgrid{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .mast{font-family:'Fraunces';font-weight:600;font-size:16.5px;letter-spacing:.12em;text-transform:uppercase;line-height:1.2}
+  .mast small{display:block;font-family:'Inter';font-weight:600;font-size:9px;letter-spacing:.34em;color:var(--hinoki);margin-top:2px;text-transform:uppercase}
+  nav.main{display:flex;gap:26px;align-items:center}
+  nav.main a{font-size:13px;font-weight:500;letter-spacing:.02em;color:var(--ink-soft);transition:color .2s}
+  nav.main a:hover{color:var(--hinoki)}
+  .lang{font-size:11px;font-weight:600;letter-spacing:.12em;border:1px solid var(--line);border-radius:20px;padding:5px 11px;color:var(--ink-soft)}
+  .note-cta{background:var(--hinoki);border-color:var(--hinoki);color:#fff;letter-spacing:.06em;transition:background .2s,transform .2s}
+  .note-cta:hover{background:var(--hinoki-deep);transform:translateY(-1px)}
+
+  /* ---------- ARTICLE HERO ---------- */
+  .arthero{position:relative;min-height:72vh;display:flex;align-items:flex-end;color:#fff;
+    --img:url('img/shumeikan/shumeikan-exterior.jpg')}
+  .arthero .ph{position:absolute;inset:0}
+  .arthero .ph::after{background:linear-gradient(180deg,rgba(32,24,15,.18) 0%,rgba(32,24,15,.20) 40%,rgba(32,24,15,.78) 100%)}
+  .arthero-inner{position:relative;z-index:2;padding:clamp(40px,6vw,80px) 0;max-width:860px}
+  .arthero .eyebrow{color:#E8C98E}
+  .arthero h1{font-size:clamp(36px,5.6vw,68px);margin:16px 0 20px}
+  .arthero p.deck{font-size:clamp(15px,1.4vw,19px);max-width:680px;color:rgba(255,255,255,.88);font-weight:300}
+  .arthero .byline{margin-top:26px;font-size:13px;color:rgba(255,255,255,.75);letter-spacing:.02em}
+  .arthero .byline b{color:#fff;font-weight:600}
+
+  /* ---------- ARTICLE BODY ---------- */
+  article.body{padding:clamp(48px,6vw,88px) 0}
+  .prose{max-width:720px;margin:0 auto}
+  .prose p{font-size:17px;line-height:1.75;color:var(--ink);margin-bottom:26px;font-weight:300}
+  .prose p b,.prose p strong{font-weight:600}
+  .prose h2{font-size:clamp(26px,3vw,36px);margin:56px 0 24px}
+  .prose .lead-p::first-letter{font-family:'Fraunces';font-size:64px;float:left;line-height:.85;padding:6px 12px 0 0;color:var(--hinoki)}
+  .prose em{font-style:italic}
+  .prose a{color:var(--hinoki)}
+  .prose .sig{font-family:'Fraunces';font-size:17px;color:var(--ink-soft);margin-top:44px;border-top:1px solid var(--line);padding-top:26px}
+
+  figure.artph{margin:44px auto;max-width:920px}
+  figure.artph .ph{aspect-ratio:16/9;border-radius:4px}
+  figure.artph figcaption{font-size:12px;color:var(--ink-soft);letter-spacing:.03em;margin-top:10px}
+  figure.artph figcaption a{color:var(--hinoki)}
+
+  /* ---------- NEXT / BACK ---------- */
+  .backbar{background:var(--paper-2);padding:36px 0}
+  .backbar .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
+  .backbar a{font-size:13px;font-weight:600;letter-spacing:.05em;color:var(--hinoki)}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--ink);color:rgba(244,238,229,.7);padding:48px 0 36px}
+  .foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12px;color:rgba(244,238,229,.5)}
+
+  @media(max-width:960px){nav.main{display:none}}
+</style>
+</head>
+<body>
+
+<!-- ========== TOP BAR ========== -->
+<header class="top">
+  <div class="wrap topgrid">
+    <a href="../index.html" class="mast">Japan Bathing Journal<small>Sauna · Onsen · Sento</small></a>
+    <div style="display:flex;align-items:center;gap:26px">
+      <nav class="main">
+        <a href="../index.html#collections">Guides</a>
+        <a href="../index.html#lead">Culture</a>
+        <a href="../index.html#etiquette">Customs</a>
+        <a href="../index.html#host">Itineraries</a>
+      </nav>
+      <a class="lang note-cta" href="../index.html#reports">Reports &rarr;</a>
+    </div>
+  </div>
+</header>
+
+<!-- ========== ARTICLE HERO ========== -->
+<section class="arthero">
+  <div class="ph"></div>
+  <div class="wrap arthero-inner">
+    <span class="eyebrow">Onsen · Hakone</span>
+    <h1>The Onsen That Refuses<br />to Be a Spa</h1>
+    <p class="deck">In March 2026, a day-use tōji bathhouse in the hills above Hakone posted a notice on its own site: it doesn't want day-spa customers, only people who need to rest and heal. It isn't rejecting Japan's bathing boom — it's asking who that boom is actually for.</p>
+    <p class="byline">By <b>Takayama Sauna</b>, Editor-in-Chief · Sauna producer, supervisor of award-winning facilities · 5 min read · July 2026</p>
+  </div>
+</section>
+
+<!-- ========== BODY ========== -->
+<article class="body">
+  <div class="wrap">
+    <div class="prose">
+      <p class="lead-p">On March 1, 2026, the operators of a small day-use tōji bathhouse in the hills above Hakone posted a notice on their own website. The headline reads, in Japanese: "We are not a day-trip hot spring facility." What follows isn't an apology or a rebrand — it's a list of what the bathhouse will no longer host: meetings, seminars, tour groups, banquets, corporate entertaining, any party of five or more, or any smaller party needing two or more rooms. It closes with a line about the guests it does want: people caring for family, people worn down by work, people recovering from illness or injury.</p>
+      <p>That bathhouse is Shumeikan, at Ubako Onsen in Hakone — the last tōji bathhouse still operating at a hot spring that has drawn visitors since at least the Edo period. Set against Japan's sauna and onsen boom, where reservation-driven leisure bathing is the visible growth story, Shumeikan looks like an outlier — a comparison we're drawing, not proof the industry runs on one model. I don't read it as a rejection of that boom, though: Shumeikan is holding an old line, adapted to a day-use format, and what it's disputing isn't how long a stay lasts but what it's for. Its own language is explicit: Shumeikan calls itself "a small tōji bathhouse that people visit for the sake of resting body and mind" (心身の療養を目的とした方々が通われる小さな湯治場です) — recuperation, not the leisure day-spa format much of the industry has scaled around. What it describes is <em>tōji</em> — a bathing tradition considerably older than the word "spa" — enforced here with a strictness about who it's for, not how long they stay.</p>
+    </div>
+
+    <figure class="artph">
+      <div class="ph" style="--img:url('img/shumeikan/shumeikan-kamiyama-view.jpg')"></div>
+      <figcaption>Shumeikan's red-roofed bathhouse, lower right, set into the forested flank of Mt. Kamiyama — the same peak whose collapse roughly 3,000 years ago is said to have opened Ubako's spring. Photo: <a href="https://shumeikan.biz/">Shumeikan official website</a>.</figcaption>
+    </figure>
+
+    <div class="prose">
+      <h2>What tōji actually is</h2>
+      <p>The word tōji (湯治) is the general Japanese term for hot-spring bathing taken for recuperation rather than leisure — historically, farmers and travelers spent the agricultural off-season at a spring, bathing repeatedly, resting, and eating simply. Shumeikan offers no overnight stay, so it adapts that rhythm — soak, rest, soak again — into visits from two hours to a full day, under its own name for the practice: kayoi tōji, "commute-style tōji." It's one operator's version of a genre, and its house rules preserve that genre's older principles — repeated bathing, rest, simplicity, quiet — more than a single unbroken practice at one address. How consistently those rules have been enforced isn't something the record establishes.</p>
+      <p>The clearest way to see the difference from a spa is structural, not aesthetic. A spa sells a menu — you book a service, someone performs it on you, the session ends. Shumeikan sells a bathing seat and a block of time instead. Most guests reserve a <em>yudoko</em>, a resting spot for one or two, in two-, four-hour, or full-day blocks from the 10 a.m. reception window — and the facility is explicit that a yudoko is not a private room: bathing happens in one small shared bath each for men and women, no individual tubs. Its few larger tatami rooms go mainly to families bringing someone who needs bathing help, not leisure parties. A spa is administered to you; tōji, at Shumeikan, is something you do yourself, inside a window the house sets.</p>
+      <p>Everything else about the operation reinforces that same logic. Bookings aren't accepted in advance — admission is same-day, first-come only. Soap and shampoo are banned in the baths, a rule the facility attributes to protecting the spring rather than any wellness philosophy. Quiet is enforced as policy, not atmosphere — the house bars anything that would disturb another guest's rest. None of this reads as scarcity marketing — it reads as a facility whose rules still center the person bathing.</p>
+
+      <h2>Water that comes when it rains</h2>
+      <p>The spring has a property I haven't seen at any other Japanese bathhouse: it doesn't always flow.</p>
+      <p>Ubako's water rises from rock exposed when the flank of Mt. Kamiyama — one of Hakone's highest peaks — collapsed roughly 3,000 years ago, according to the facility and local tourism sources, in what is generally described as a phreatic event. The spring is a natural upwelling rather than a drilled well, and its output tracks rainfall: it typically surfaces around three times a year, timed to the spring rains, the rainy season, and the autumn rains. When it isn't flowing, the facility switches to a reserve well on-site — a routine substitution, not a closure. Even so, check current status before visiting regardless of season.</p>
+      <p>That dependency shows up in Shumeikan's news feed like a weather report. On June 29, 2026, the most recent posting we could confirm before filing this piece, the site carried a notice titled "The water is here" — three words marking that this year's natural flow had arrived. Few bathhouses on piped or drilled water would ever need to post that.</p>
+      <p>The water also carries a story older than the geology behind it was ever understood. Local lore holds that young Kintarō — the folk hero later known as Sakata no Kintoki — injured an eye as a child, and that his mother, praying at the local shrine for weeks, was told of a healing spring beyond the mountain; bathing his eye in it is said to have cured him, and the neighborhood's name is popularly traced to her. This is a widely repeated regional legend, not a documented event. Better documented is the water's long use — records connect bathing at Ubako back into the Edo period, with the facility itself generally described as a Meiji-to-Taishō-era establishment, though we haven't independently verified a founding year and treat any single date cited elsewhere with caution.</p>
+    </div>
+
+    <figure class="artph">
+      <div class="ph" style="--img:url('img/shumeikan/shumeikan-source-bath.jpg')"></div>
+      <figcaption>Inside one of Shumeikan's stone-walled bathing rooms: a sacred shimenawa rope marks the spring, and mineral deposits stain the rock where Ubako's water has surfaced for generations. Photo: <a href="https://shumeikan.biz/spa/">Shumeikan official website</a>.</figcaption>
+    </figure>
+
+    <div class="prose">
+      <h2>If you go</h2>
+      <p>Go on the facility's terms. There is no reservation system — arrive early for a full-day slot, since the 10–11 a.m. window fills first-come. As of a July 17, 2026 check against Shumeikan's own site, a two-hour yudoko booking — bathing fee, robe, and towel included, not a private room — runs ¥2,000 per person, and a full day of tōji is ¥5,600. Shumeikan is closed every Thursday and all of February. Car navigation often won't register "Shumeikan" as a search term — the facility asks visitors to search "Ubako Onsen" instead.</p>
+      <p>A few house rules are worth flagging, especially against the tattoo-friendly venues profiled elsewhere in this journal (<a href="tattoo-friendly-baths.html">Tattoo-Friendly Baths, Mapped</a>). Shumeikan does not admit guests with tattoos, full stop — its policy states this isn't a matter of size, count, or visibility. (Tenzan, a separate facility under the same operator, currently allows tattoos for solo guests only — the two shouldn't be confused.) Children three and under aren't admitted, the facility serves no meals, outside alcohol isn't allowed in, and photography and video are banned. Groups of friends are also asked, as house preference rather than a rule, to keep visits small.</p>
+      <p>Operational details here — pricing, hours, house rules — come from Shumeikan's own website, checked on the dates cited above. Historical and geological context draws on local tourism sources and secondary references; unconfirmed claims are flagged as such. This piece doesn't include a facility visit, and pricing or status can change without notice. Check the official site before you go. For travelers who want tōji built into a longer itinerary rather than a single afternoon detour, that's exactly what our Bespoke service is for.</p>
+      <p class="sig">— Takayama Sauna, Editor-in-Chief</p>
+      <p style="font-size:11.5px;color:var(--ink-soft);margin-top:14px">Lead photograph: Shumeikan's entrance building in the hills above Hakone, its red roof and dark timber facade set among summer greenery. Photo: <a href="https://shumeikan.biz/">Shumeikan official website</a>.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ========== BACK BAR ========== -->
+<div class="backbar">
+  <div class="wrap">
+    <a href="../index.html">← Back to the Journal</a>
+  </div>
+</div>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="wrap foot-bottom">
+    <span>© 2026 Japan Bathing Journal · Published by totonoete inc.</span>
+    <span>Made in Japan · 日本の湯を、世界の言葉で。</span>
+  </div>
+</footer>
+
+</body>
+</html>

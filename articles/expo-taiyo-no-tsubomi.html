@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Sauna Japan Took to Its Expo — Japan Bathing Journal</title>
+<link rel="icon" type="image/png" href="../brand/favicon-source.png" />
+<meta name="description" content="In April 2025, a membrane-structure sauna went up inside the grounds of Expo 2025 Osaka — a national stage, not a niche one. Nine months after the gates closed, its next address still hasn't been announced." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,400..600&family=Inter:wght@300;400;500;600&family=Noto+Serif+JP:wght@300;500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --paper:#F4EEE5;
+    --paper-2:#EDE4D7;
+    --ink:#20180F;
+    --ink-soft:#5A4E40;
+    --line:#D6C9B6;
+    --hinoki:#9C5E33;
+    --hinoki-deep:#7A431F;
+    --steam:#8FA0A0;
+    --gold:#B98A3E;
+    --shadow:0 30px 60px -30px rgba(32,24,15,.45);
+    --maxw:1240px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',system-ui,sans-serif;
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:400;line-height:1.05;letter-spacing:-.01em}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+
+  .ph{position:relative;overflow:hidden;background:#cdbfa9}
+  .ph::before{content:"";position:absolute;inset:0;background-size:cover;background-position:center;
+    background-image:var(--img);filter:saturate(.86) contrast(1.02);transform:scale(1.01)}
+  .ph::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(32,24,15,.06),rgba(32,24,15,.30));mix-blend-mode:multiply}
+
+  .eyebrow{font-family:'Inter';font-size:11.5px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--hinoki)}
+
+  /* ---------- TOP BAR ---------- */
+  header.top{position:sticky;top:0;z-index:60;background:rgba(244,238,229,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .topgrid{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .mast{font-family:'Fraunces';font-weight:600;font-size:16.5px;letter-spacing:.12em;text-transform:uppercase;line-height:1.2}
+  .mast small{display:block;font-family:'Inter';font-weight:600;font-size:9px;letter-spacing:.34em;color:var(--hinoki);margin-top:2px;text-transform:uppercase}
+  nav.main{display:flex;gap:26px;align-items:center}
+  nav.main a{font-size:13px;font-weight:500;letter-spacing:.02em;color:var(--ink-soft);transition:color .2s}
+  nav.main a:hover{color:var(--hinoki)}
+  .lang{font-size:11px;font-weight:600;letter-spacing:.12em;border:1px solid var(--line);border-radius:20px;padding:5px 11px;color:var(--ink-soft)}
+  .note-cta{background:var(--hinoki);border-color:var(--hinoki);color:#fff;letter-spacing:.06em;transition:background .2s,transform .2s}
+  .note-cta:hover{background:var(--hinoki-deep);transform:translateY(-1px)}
+
+  /* ---------- ARTICLE HERO ---------- */
+  .arthero{position:relative;min-height:72vh;display:flex;align-items:flex-end;color:#fff;
+    --img:url('img/taiyo-tsubomi/taiyo-tsubomi-exterior-petals-sky.jpg')}
+  .arthero .ph{position:absolute;inset:0}
+  .arthero .ph::after{background:linear-gradient(180deg,rgba(32,24,15,.18) 0%,rgba(32,24,15,.20) 40%,rgba(32,24,15,.78) 100%)}
+  .arthero-inner{position:relative;z-index:2;padding:clamp(40px,6vw,80px) 0;max-width:860px}
+  .arthero .eyebrow{color:#E8C98E}
+  .arthero h1{font-size:clamp(36px,5.6vw,68px);margin:16px 0 20px}
+  .arthero p.deck{font-size:clamp(15px,1.4vw,19px);max-width:680px;color:rgba(255,255,255,.88);font-weight:300}
+  .arthero .byline{margin-top:26px;font-size:13px;color:rgba(255,255,255,.75);letter-spacing:.02em}
+  .arthero .byline b{color:#fff;font-weight:600}
+
+  /* ---------- ARTICLE BODY ---------- */
+  article.body{padding:clamp(48px,6vw,88px) 0}
+  .prose{max-width:720px;margin:0 auto}
+  .prose p{font-size:17px;line-height:1.75;color:var(--ink);margin-bottom:26px;font-weight:300}
+  .prose p b,.prose p strong{font-weight:600}
+  .prose h2{font-size:clamp(26px,3vw,36px);margin:56px 0 24px}
+  .prose .lead-p::first-letter{font-family:'Fraunces';font-size:64px;float:left;line-height:.85;padding:6px 12px 0 0;color:var(--hinoki)}
+  .prose em{font-style:italic}
+  .prose a{color:var(--hinoki)}
+  .prose .sig{font-family:'Fraunces';font-size:17px;color:var(--ink-soft);margin-top:44px;border-top:1px solid var(--line);padding-top:26px}
+  .prose .cta-report{border:1px solid var(--line);border-left:3px solid var(--hinoki);border-radius:4px;padding:20px 24px;background:#fff;font-size:15px}
+  .prose .cta-report a{color:var(--hinoki);font-weight:600}
+
+  figure.artph{margin:44px auto;max-width:920px}
+  figure.artph .ph{aspect-ratio:16/9;border-radius:4px}
+  figure.artph figcaption{font-size:12px;color:var(--ink-soft);letter-spacing:.03em;margin-top:10px}
+  figure.artph figcaption a{color:var(--hinoki)}
+
+  /* ---------- NEXT / BACK ---------- */
+  .backbar{background:var(--paper-2);padding:36px 0}
+  .backbar .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
+  .backbar a{font-size:13px;font-weight:600;letter-spacing:.05em;color:var(--hinoki)}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--ink);color:rgba(244,238,229,.7);padding:48px 0 36px}
+  .foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12px;color:rgba(244,238,229,.5)}
+
+  @media(max-width:960px){nav.main{display:none}}
+</style>
+</head>
+<body>
+
+<!-- ========== TOP BAR ========== -->
+<header class="top">
+  <div class="wrap topgrid">
+    <a href="../index.html" class="mast">Japan Bathing Journal<small>Sauna · Onsen · Sento</small></a>
+    <div style="display:flex;align-items:center;gap:26px">
+      <nav class="main">
+        <a href="../index.html#collections">Guides</a>
+        <a href="../index.html#lead">Culture</a>
+        <a href="../index.html#etiquette">Customs</a>
+        <a href="../index.html#host">Itineraries</a>
+      </nav>
+      <a class="lang note-cta" href="../index.html#reports">Reports &rarr;</a>
+    </div>
+  </div>
+</header>
+
+<!-- ========== ARTICLE HERO ========== -->
+<section class="arthero">
+  <div class="ph"></div>
+  <div class="wrap arthero-inner">
+    <span class="eyebrow">Experience · Osaka</span>
+    <h1>The Sauna Japan Took<br />to Its Expo</h1>
+    <p class="deck">In April 2025, a membrane-structure sauna went up inside the grounds of Expo 2025 Osaka — a national stage, not a niche one. Nine months after the gates closed, its next address still hasn't been announced.</p>
+    <p class="byline">By <b>Takayama Sauna</b>, Editor-in-Chief · Sauna producer, supervisor of award-winning facilities · 6 min read · July 2026</p>
+  </div>
+</section>
+
+<!-- ========== BODY ========== -->
+<article class="body">
+  <div class="wrap">
+    <div class="prose">
+      <p class="lead-p">A World Expo is a country's answer to a simple, high-stakes question: what do we want the world to see us building? Osaka's answer, in 2025, included a sauna.</p>
+      <p>Not a fringe attraction tucked behind a pavilion. <em>Taiyo no Tsubomi</em> ("Bud of the Sun") stood in the Future Life zone of Expo 2025 Osaka as a sponsored structure in its own right, built by Taiyo Kogyo Corporation, one of the country's major membrane-architecture manufacturers, and open to the public by lottery for the length of the six-month run. I've spent years watching Japan's sauna boom move through comic-book adaptations, television segments, and neighborhood bathhouse renovations. This is the first time I've watched it move onto an Expo built to represent the country to the rest of the world. That's worth pausing on before anything else.</p>
+    </div>
+
+    <figure class="artph">
+      <div class="ph" style="--img:url('img/taiyo-tsubomi/taiyo-tsubomi-membrane-petals-dusk.jpg')"></div>
+      <figcaption>Taiyo no Tsubomi's ETFE membrane petals, aluminum-framed and inflated into tetrahedral sails, catch the low sun at Expo 2025 Osaka. Photo: Taiyo no Tsubomi official website (Taiyo Kogyo), <a href="https://www.taiyo-tsubomi.jp/" target="_blank" rel="noopener">taiyo-tsubomi.jp</a>.</figcaption>
+    </figure>
+
+    <div class="prose">
+      <h2>The bud of the sun</h2>
+      <p>Strip away the theming and <em>Taiyo no Tsubomi</em> is a piece of building-technology theater as much as a bathing facility. Its three connected units — sauna, lounge, and cold plunge — are built almost entirely from an aluminum frame and an ETFE film 0.25 millimetres thick, the same class of lightweight plastic membrane used in stadium roofs, inflated into a cluster of tetrahedral "petals" that let natural daylight flood the interior rather than blocking it out. Taiyo Kogyo has been public since before the Expo opened that the structure was designed to be deflated, packed down, and reassembled elsewhere once the six-month run ended — a portable building by design, not by accident.</p>
+      <p>The number that gives the project its most verifiable claim to fame is a height: 8.4 meters. On October 8, 2025, five days before the Expo closed, Guinness World Records certified <em>Taiyo no Tsubomi</em> as the tallest membrane-structure sauna building on record, with company president Yumi Nomura on hand for the ceremony. That's a third-party-verified fact, one of the few hard numbers this story offers. The "world's first membrane sauna" framing in the project's own marketing is Taiyo Kogyo's language, not an independently confirmed record, and this piece treats it accordingly — a company's claim about itself, not this journal's.</p>
+      <p>Getting in was, by visitor accounts, hard. The sauna ran on a lottery-entry ticket inside the Expo's own booking system, not a walk-up attraction, and visitors who wrote about the experience online consistently describe reservations as hard to get for most of the run — the pattern you'd expect when a fourteen-person session, offered a handful of times a day, meets six months of Expo foot traffic. No operator or Expo Association figure backs a precise multiplier, so this piece won't repeat one.</p>
+    </div>
+
+    <figure class="artph">
+      <div class="ph" style="--img:url('img/taiyo-tsubomi/taiyo-tsubomi-interior-oculus-daylight.jpg')"></div>
+      <figcaption>Looking straight up through the petal cluster's central ring: the ETFE film is designed to let daylight flood the interior rather than block it out. Photo: Taiyo no Tsubomi official website (Taiyo Kogyo), <a href="https://www.taiyo-tsubomi.jp/" target="_blank" rel="noopener">taiyo-tsubomi.jp</a>.</figcaption>
+    </figure>
+
+    <div class="prose">
+      <h2>What getting into an Expo actually means</h2>
+      <p>Japan's current sauna boom traces to 2019 — a manga-turned-TV-drama, a wave of self-service <em>löyly</em>, a market that spent its first several years being described, fairly, as a youth trend and a media moment. A World Expo doesn't hand its program to youth trends casually. Expo 2025 Osaka ran on a familiar World's Fair structure: national pavilions from more than 150 participating countries, alongside a slate of organizer events — sponsored programming run directly by the Japan Association for the 2025 World Exposition, funded by corporate partners rather than curated as a government's statement of national culture. <em>Taiyo no Tsubomi</em> was one of those organizer events: a Silver Partner sponsorship built by Taiyo Kogyo, with the guest experience produced by TTNE, the Tokyo sauna-hospitality group known for popularizing <em>totonou</em> (the state of post-sauna clarity) in Japan. That's a narrower claim than "the government chose sauna to represent Japan," and it's the accurate one.</p>
+      <p>What it still says is worth taking seriously. Self-service <em>löyly</em> listings on Sauna Ikitai went from 37 facilities in early 2019 to 1,347 by November 2022 — the kind of trajectory that turns a media moment into infrastructure. A major industrial manufacturer looked at that trajectory and decided a working sauna, not a scale model or a video wall, was the best showcase for its core membrane technology at Expo scale. That's a corporate bet, not a state one. But it's a bet placed inside an Expo's official program, in front of an international audience of more than 150 participating nations — a different order of visibility than another design-forward bathhouse opening in Koenji.</p>
+      <p>One sponsored structure doesn't prove sauna has joined Japan's cultural-export canon the way sushi or the tea ceremony have. What it does show is the sauna boom's first appearance at this altitude — inside a national Expo's official program, in front of an international audience — rather than at the scale of a facility, a neighborhood, or a news cycle. Whether that altitude sticks is a question one Expo season can't answer; it needs a second data point this piece doesn't have yet.</p>
+    </div>
+
+    <figure class="artph">
+      <div class="ph" style="--img:url('img/taiyo-tsubomi/taiyo-tsubomi-guinness-ceremony.jpg')"></div>
+      <figcaption>October 8, 2025: Taiyo Kogyo executives and Guinness World Records adjudicators at the certification ceremony for the tallest membrane-structure sauna building, with the petal cluster behind them. Photo: Taiyo Kogyo Corporation press materials, <a href="https://www.taiyokogyo.co.jp/en/news/68664/" target="_blank" rel="noopener">taiyokogyo.co.jp</a>.</figcaption>
+    </figure>
+
+    <div class="prose">
+      <h2>The question nobody has answered</h2>
+      <p>Expo 2025 Osaka closed on October 13, 2025. Five days before that, at the Guinness certification ceremony, Nomura told press that the company was "considering relocation" of the structure, with the stated goal of letting more people experience it, and that Taiyo Kogyo had already received multiple inquiries about where it might go next.</p>
+      <p>That is the last public statement on the subject. As of this writing, July 17, 2026 — nine months after the Expo closed — Taiyo Kogyo has not announced a relocation site, a reopening date, or a decision to retire the structure. The public record, as far as this piece can trace it, ends at "considering."</p>
+      <p>That gap isn't a scandal, and this piece won't dress it up as one. Portable buildings between engagements are an ordinary, unglamorous logistics problem, and nine months of silence on a relocation decision isn't unusual for a project of this scale. But it is a useful test case for something bigger than one sauna: whether Japan's sauna boom, having reached Expo scale in 2025, can carry that visibility somewhere permanent — or whether <em>Taiyo no Tsubomi</em> turns out to have been this structure's one and only address. A building engineered from the start to be taken apart and rebuilt is either the beginning of a second life or a very expensive six-month exhibit, and right now, publicly, it's genuinely both.</p>
+      <p>We'll keep tracking this one. If Taiyo Kogyo announces a next site, it'll be in this journal before most outlets have written the headline.</p>
+      <p class="cta-report">This piece draws on public statements, press materials, and third-party press coverage through July 17, 2026; it does not include a facility visit or a direct interview with Taiyo Kogyo. Reservation-difficulty figures and Nomura's post-Expo comments come from visitor accounts and press coverage, not verified operator data, and a follow-up announcement this piece simply hasn't located may still exist. For the fuller data behind Japan's sauna-facility boom — the market sizing, the openings, the numbers this piece deliberately left out — that's what our <a href="../index.html#reports">paid quarterly report</a> and newsletter are built for.</p>
+      <p class="sig">— Takayama Sauna, Editor-in-Chief</p>
+      <p style="font-size:11.5px;color:var(--ink-soft);margin-top:14px">Lead photography: Taiyo no Tsubomi's membrane petals at Expo 2025 Osaka. Photo: Taiyo no Tsubomi official website (Taiyo Kogyo), <a href="https://www.taiyo-tsubomi.jp/" target="_blank" rel="noopener">taiyo-tsubomi.jp</a>.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ========== BACK BAR ========== -->
+<div class="backbar">
+  <div class="wrap">
+    <a href="../index.html">← Back to the Journal</a>
+    <a href="../index.html#reports">Next: The Japanese Sauna Market, Decoded →</a>
+  </div>
+</div>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="wrap foot-bottom">
+    <span>© 2026 Japan Bathing Journal · Published by totonoete inc.</span>
+    <span>Made in Japan · 日本の湯を、世界の言葉で。</span>
+  </div>
+</footer>
+
+</body>
+</html>
